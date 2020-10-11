@@ -35,23 +35,23 @@ function generatePassword() {
   }
 
   // input for letter options
-  var confirmLowercase = confirm("Select OK if you want to include lowercase letters in your generated password.");
-  var confirmUppercase = confirm("Select OK if you want to include UPPERCASE letters in your generated password.");
+  var confirmLowercase = confirm("Select OK if you want to include lowercase letters \nin your generated password.");
+  var confirmUppercase = confirm("Select OK if you want to include UPPERCASE letters \nin your generated password.");
   // input for numeric and symbol options
-  var confirmNumeric = confirm("Select OK if you want to include numbers in your generated password.");
-  var confirmSymbol = confirm("Select OK if you want to include symbols in your generated password.");
+  var confirmNumeric = confirm("Select OK if you want to include numbers \nin your generated password.");
+  var confirmSymbol = confirm("Select OK if you want to include symbols \nin your generated password.");
 
   // loop for invalid response
-  while (confirmSymbol === false && confirmNumeric === false && confirmLowercase === false && confirmUppercase === false) {
-    alert("You MUST choose at least one option.");
-    var confirmLowercase = confirm("Select OK if you want to include lowercase letters in your generated password.");
-    var confirmUppercase = confirm("Select OK if you want to include UPPERCASE letters in your generated password.");
-    var confirmNumeric = confirm("Select OK if you want to include numbers in your generated password.");
-    var confirmSymbol = confirm("Select OK if you want to include symbols in your generated password.");
+  while (confirmLowercase === false && confirmUppercase === false && confirmNumeric === false && confirmSymbol === false) {
+    alert("C'mon, you MUST choose at least one option.");
+    var confirmLowercase = confirm("Select OK if you want to include lowercase letters \nin your generated password.");
+    var confirmUppercase = confirm("Select OK if you want to include UPPERCASE letters \nin your generated password.");
+    var confirmNumeric = confirm("Select OK if you want to include numbers \nin your generated password.");
+    var confirmSymbol = confirm("Select OK if you want to include symbols \nin your generated password.");
   }
 
   var passwordCharacters = []
-  debugger
+
   // concat arrays
   if (confirmLowercase) {
     passwordCharacters = passwordCharacters.concat(lowercase)
